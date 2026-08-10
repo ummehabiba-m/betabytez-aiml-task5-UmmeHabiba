@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pandas
+matplotlib
+seaborn
+groq
+python-multipart
+pydantic
