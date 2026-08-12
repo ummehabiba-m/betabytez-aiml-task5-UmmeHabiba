@@ -13,6 +13,21 @@ matplotlib.use("Agg")  # non-interactive backend, needed for server-side chart g
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Make all generated charts match the app's dark violet/magenta theme
+plt.rcParams.update({
+    "figure.facecolor": "#1A0B2E",
+    "axes.facecolor": "#1A0B2E",
+    "savefig.facecolor": "#1A0B2E",
+    "axes.edgecolor": "#E8DFFF",
+    "axes.labelcolor": "#E8DFFF",
+    "text.color": "#E8DFFF",
+    "xtick.color": "#E8DFFF",
+    "ytick.color": "#E8DFFF",
+    "grid.color": "#3A2A55",
+    "axes.grid": True,
+})
+sns.set_palette(["#B026FF", "#FF2FD4", "#7B2FF7", "#E8DFFF"])
+
 from .codegen import generate_code
 
 

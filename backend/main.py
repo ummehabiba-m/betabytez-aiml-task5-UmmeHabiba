@@ -122,7 +122,7 @@ def ask_question(request: QueryRequest):
         raise HTTPException(status_code=404, detail="Session not found. Upload a CSV first.")
 
     df, df_info = session["df"], session["df_info"]
-    task = f"{request.question}\nIf the answer is a number/text, assign it to `result` and print it. If it's better shown as a chart, create the chart."
+    task = f"{request.question}\nIf this question cannot be answered using the available columns in df, set result to 'I cannot answer this question based on the given data.' and print it — do not guess or default to an unrelated calculation. Otherwise, if the answer is a number/text, assign it to `result` and print it. If it's better shown as a chart, create the chart."
     exec_result = run_with_retry(task, df, df_info, max_retries=3)
 
     return {
