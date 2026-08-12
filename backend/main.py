@@ -31,7 +31,7 @@ app = FastAPI(title="Smart Data Analysis Platform API")
 # In production, restrict allow_origins to your actual Streamlit Cloud URL.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://betabytez-aiml-task5-ummehabiba1.streamlit.app/"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
