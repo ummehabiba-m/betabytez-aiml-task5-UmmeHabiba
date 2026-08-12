@@ -10,7 +10,7 @@ import streamlit as st
 from PIL import Image
 
 # Change this to your Render URL once deployed (e.g. "https://your-app.onrender.com")
-BACKEND_URL = "http://localhost:8000"
+BACKEND_URL = "https://betabytez-aiml-task5-ummehabiba.onrender.com"
 
 st.set_page_config(page_title="Smart Data Analysis Platform", layout="wide", page_icon="⚡")
 
